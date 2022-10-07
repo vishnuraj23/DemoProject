@@ -60,7 +60,7 @@ public class BaseTest {
 	static ExtentReports extent;
 	static ExtentTest test;
 	public static Properties prop;
-	
+//	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
 	
 	
 	@BeforeSuite
@@ -105,7 +105,7 @@ public class BaseTest {
 
 		try {
 			FileInputStream ip = new FileInputStream(
-					Path + "\\src\\main\\resources\\Propertiesfile\\Config.properties");
+					Path + "\\src\\test\\resources\\Propertiesfile\\Config.properties");
 			prop.load(ip);
 			
 		} catch (FileNotFoundException e) {
@@ -123,15 +123,25 @@ public class BaseTest {
 	{
 		//Condition for chrome browser
 		if(Browser.equalsIgnoreCase("Chrome")) {
-			 System.setProperty("webdriver.chrome.driver","C:\\Users\\Vichu\\.cache\\selenium\\chromedriver\\win32\\106.0.5249.61\\chromedriver.exe");
-			
-           
- //           options.setExperimentalOption("prefs", chromePrefs);
-             driver = new ChromeDriver();
-           	driver.navigate().to(prop.getProperty("URL"));
-			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			WebDriverManager.chromedriver().setup();
+			String downloadFilepath = null;
+            HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+            chromePrefs.put("profile.default_content_settings.popups", 0);
+            chromePrefs.put("download.default_directory", downloadFilepath);
+            ChromeOptions options = new ChromeOptions();
+            //options.setExperimentalOption("prefs", chromePrefs);
+            options.addArguments("--incognito");
+            options.setAcceptInsecureCerts(true);
+//            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+//            DesiredCapabilities cap = new DesiredCapabilities();
+//            //DesiredCapabilities cap = DesiredCapabilities.chrome();
+//            cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//            cap.setCapability(ChromeOptions.CAPABILITY, options);
+//            options.merge(cap);
+            driver = new ChromeDriver(options);
+            driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 		
 		//Condition for IE browser

@@ -5,13 +5,13 @@
   <parameter name="Browser" value="Chrome"/>
   <test thread-count="5" name="Demo(failed)">
     <classes>
-      <class name="test.Demo_testcases">
+      <class name="test.Testcases">
         <methods>
           <include name="EndReport"/>
-          <include name="StartReport"/>
           <include name="LaunchBrowser" invocation-numbers="0"/>
+          <include name="StartReport"/>
         </methods>
-      </class> <!-- test.Demo_testcases -->
+      </class> <!-- test.Testcases -->
     </classes>
   </test> <!-- Demo(failed) -->
 </suite> <!-- Failed suite [Demo Suite] -->

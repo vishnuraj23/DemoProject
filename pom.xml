@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>PDE_Project</groupId>
-	<artifactId>PDE_Project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Selenium_Project</groupId>
+  <artifactId>Selenium_Project_Demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -99,14 +99,7 @@
 			<artifactId>selenium-ie-driver</artifactId>
 			<version>4.4.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.assertthat/selenium-shutterbug -->
-		<dependency>
-			<groupId>com.assertthat</groupId>
-			<artifactId>selenium-shutterbug</artifactId>
-			<version>1.5</version>
-		</dependency>
 		<!-- WebdriverManager -->
-		
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
@@ -123,28 +116,6 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-
-
-		<!--  https://mvnrepository.com/artifact/org.apache.poi/poi 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.17</version>
-		</dependency>
-		 https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.17</version>
-		</dependency>
-		 https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-scratchpad</artifactId>
-			<version>3.17</version>
-		</dependency> -->
-
-
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-scratchpad</artifactId>
