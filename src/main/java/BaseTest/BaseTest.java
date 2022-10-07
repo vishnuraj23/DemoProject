@@ -60,7 +60,7 @@ public class BaseTest {
 	static ExtentReports extent;
 	static ExtentTest test;
 	public static Properties prop;
-//	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
+//	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
 	
 	
 	@BeforeSuite
