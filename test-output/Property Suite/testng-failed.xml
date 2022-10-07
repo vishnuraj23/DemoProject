@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Property Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="URL" value="QA_PDE"/>
+  <parameter name="Browser" value="Chrome"/>
+  <test thread-count="5" name="New Business Issue(failed)">
+    <classes>
+      <class name="tests.PF_New_Business_Issue">
+        <methods>
+          <include name="new_business" invocation-numbers="0"/>
+          <include name="EndReport"/>
+        </methods>
+      </class> <!-- tests.PF_New_Business_Issue -->
+    </classes>
+  </test> <!-- New Business Issue(failed) -->
+</suite> <!-- Failed suite [Property Suite] -->
